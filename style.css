@@ -12,37 +12,61 @@ body {
     text-align: center;
 }
 
-header {
-	height: 20%;
+/* ============================ */
+/* Begin Header CSS */
+.header {
 	width: auto;
-	background-image: url("images/coffeebean.jpg");
+	background-image: url("images/World Map Night.jpg");
+	background-position: right 50% bottom 75%; /* Adjust image view in header */
+	background-color:  rgba(0, 0, 0, 0.5);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	padding-bottom: 5%;
+	margin-bottom: 12px;
+	text-align: center;
 }
 
-header h1{
+.header h1{
 	font-family: Copperplate Gothic Light;
 	color: Ivory;
 	text-align: center;
-	font-size: 70px;
-	padding-top: 30px;
+	font-size: 60px;
+	padding-top: 30px; /* Give space at top of page */
 	margin-block-start: 0px; /* Margin begins at top of page so no scrolling */
+	margin-block-end: 0px; 
 	text-shadow: 2px 2px black;
+	text-align: center; /* Center Text */
+	position: relative; /* Position Text Next to Image */
+	padding-right: 500px; /* Position Text Next to Image */
 }
 
-.navi {
-	width: auto;
-    height: auto;
-    background-size: 100% 100%;
-    padding-bottom: 10%;
+.header h5{
+	font-family: Copperplate Gothic Light;
+	color: Ivory;
+	font-size: 20px;
+	margin-block-start: 0.67em; /* Margin begins at top of page so no scrolling */
+	margin-block-end: 0px; 
+	text-shadow: 2px 2px black;
+	text-align: center; /* Center Text */
+	position: relative; /* Position Text Next to Image */
+	padding-right: 500px; /* Position Text Next to Image */
 }
 
+.header img {
+	float: left;
+	border-radius: 50%;
+	display: block;
+	margin-left: 22%;
+	margin-top: 2%;
+	width: 150px;
+	height: 150px;
+}
+
+/* ============================ */
+/* Begin Navigation Bar CSS */
 nav a {
-    background-color: aqua;
-    float: left;
-    padding: 12px;
-	width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    padding: 0px 12px 0px 12px;
+	width: 33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
 	color: black;
     text-align: center;
 	text-transform: uppercase;
@@ -50,6 +74,18 @@ nav a {
 	font-weight: bold;
 	font-family: Bodoni MT;
 }
+
+.navbar-brand, .navbar-nav, .navbar-nav>li {
+	float: none !important;
+  }
+  
+  .navbar-nav {
+	display: block;
+  }
+  
+  .navbar-nav>li {
+	flex: 1;
+  }
 
 /* unvisited link */
 a:link {
@@ -61,6 +97,21 @@ a:hover {
   color:  rgba(0, 0, 0, 0.5);
 }
 
+hr {
+	border-top: 1px solid #095484;
+}
+
+/* ============================ */
+/* Begin Body CSS */
+div#content {
+	width: auto;
+	height: auto;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: 5%;
+}
+
 article {
     float: center;
 	color: black;
@@ -68,15 +119,8 @@ article {
 	font-size: 20px;
 }
 
-div#content {
-	width: auto;
-	height: auto;
-	background-image: url("images/coffee.jpg");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
+/* ============================ */
+/* Begin Footer CSS */
 footer {
 	position: fixed;
 	left: 0;

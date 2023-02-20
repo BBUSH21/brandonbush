@@ -3,6 +3,17 @@ html{
     width: 100%;
 }
 
+/* Color and Range variables */
+:root {
+	--black: #1a1a1a;
+	--white: #fff;
+	--gray: #ccc;
+	--darkgreen: #18846C;
+	--lightbrown: antiquewhite;
+	--darkblack: rgba(0,0,0,0.8);
+	--minRangeValue: 280px;
+}
+
 body {
 	font-family: Trebuchet MS, Arial;	
 	height: 100%;
@@ -10,6 +21,36 @@ body {
 	margin: 0px;
     background-color: GhostWhite;
     text-align: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;  
+	outline: none;
+	border: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.gallery {
+	padding: 0 2rem;
+}
+
+.container {
+	max-width: 1030px;
+	margin: 0 auto;
+}
+
+ol {
+	list-style: none;
+}
+
+a {
+	color: inherit;
 }
 
 /* ============================ */
@@ -78,15 +119,15 @@ nav a {
 
 .navbar-brand, .navbar-nav, .navbar-nav>li {
 	float: none !important;
-  }
+}
   
   .navbar-nav {
 	display: block;
-  }
+}
   
   .navbar-nav>li {
 	flex: 1;
-  }
+}
 
 /* unvisited link */
 a:link {
@@ -164,8 +205,44 @@ article {
   margin-left: 45px;
 }
 
-/* Projects */
+/* Image List*/
+.image-list {
+	margin: 3rem 0;
+}
 
+.image-list li {
+	background: var(--lightbrown);
+	color: var(--darkblack);
+}
+
+.image-list img {
+	background: #e6e6e6;
+}
+
+.image-list a:first-child {
+	font-weight: bold;
+	font-size: 1.15rem;
+}
+
+.image-list a:last-child {
+	margin-top: 0.5rem;
+}
+
+.image-list p {
+	font-size: 12px;
+	margin-top: 0.5rem;
+}
+
+/* Grid View*/
+.grid-view {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue), 1fr));
+}
+  
+.grid-view figcaption {
+	padding: 1rem;
+}
 
 /* ============================ */
 /* Begin Footer CSS */
@@ -173,7 +250,7 @@ footer {
 	left: 0;
 	bottom: 0;
 	color: white;
-	background-color: rgb(145, 107, 4);
+	background-color: rgb(180, 138, 21);
 	width: 100%;
 	margin: 100% 0 0px 0px;
 	padding: 20px 0 0 0;
